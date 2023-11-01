@@ -1,0 +1,211 @@
+!SESSION 2023-10-23 11:13:29.457 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-23 11:15:56.950
+!MESSAGE Log4j2 initialized with config file /Users/dilnozabobokalonova/embedded_c/STM32-L4/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-23 11:16:02.529
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-23 11:17:31.658
+!MESSAGE Indexed 'HelloHAL' (32 sources, 91 headers) in 7.27 sec: 8,334 declarations; 58,690 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.003%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-25 19:45:26.704
+!MESSAGE Indexed 'HelloBSP' (32 sources, 91 headers) in 4.1 sec: 8,334 declarations; 58,690 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.003%)
+!SESSION 2023-10-25 19:52:54.850 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-25 19:53:05.955
+!MESSAGE Log4j2 initialized with config file /Users/dilnozabobokalonova/embedded_c/STM32-L4/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-25 19:53:16.673
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-10-25 19:55:37.424 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-25 19:55:46.536
+!MESSAGE Log4j2 initialized with config file /Users/dilnozabobokalonova/embedded_c/STM32-L4/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-25 19:55:57.814
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-25 19:57:25.231
+!MESSAGE Indexed 'HelloBSP' (32 sources, 127 headers) in 16.5 sec: 14,918 declarations; 82,435 references; 3 unresolved inclusions; 46 syntax errors; 171 unresolved names (0.18%)
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2023-10-25 20:05:44.718
+!MESSAGE Exception saving preferences to: /Applications/STM32CubeIDE.app/Contents/Eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/STM32CubeIDE.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.
+!STACK 0
+java.nio.file.NoSuchFileException: /Applications/STM32CubeIDE.app/Contents/Eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/STM32CubeIDE.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.bak -> /Applications/STM32CubeIDE.app/Contents/Eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/STM32CubeIDE.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:477)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:266)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:292)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1066)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:141)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:54)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2023-10-25 20:05:44.731
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: /Applications/STM32CubeIDE.app/Contents/Eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/STM32CubeIDE.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:300)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1066)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:141)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:54)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.NoSuchFileException: /Applications/STM32CubeIDE.app/Contents/Eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/STM32CubeIDE.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.bak -> /Applications/STM32CubeIDE.app/Contents/Eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/STM32CubeIDE.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixCopyFile.move(UnixCopyFile.java:477)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.move(UnixFileSystemProvider.java:266)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:292)
+	... 4 more
+!SESSION 2023-10-25 20:07:03.938 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data file:/Users/dilnozabobokalonova/embedded_c/STM32-L4/ -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-25 20:07:21.636
+!MESSAGE Log4j2 initialized with config file /Users/dilnozabobokalonova/embedded_c/STM32-L4/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-25 20:07:45.898
+!MESSAGE Started RMI Server, listening on port 41338
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-25 20:15:52.487
+!MESSAGE Indexed 'HelloBSPV2' (32 sources, 91 headers) in 10 sec: 8,334 declarations; 58,690 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.003%)
+!SESSION 2023-10-30 10:57:54.651 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-30 10:58:30.589
+!MESSAGE Log4j2 initialized with config file /Users/dilnozabobokalonova/embedded_c/STM32-L4/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-30 10:58:40.009
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-10-30 10:59:08.490 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-30 10:59:25.555
+!MESSAGE Log4j2 initialized with config file /Users/dilnozabobokalonova/embedded_c/STM32-L4/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-30 10:59:34.865
+!MESSAGE Started RMI Server, listening on port 41338
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-30 11:24:14.211
+!MESSAGE Indexed 'HelloBSPV3' (32 sources, 91 headers) in 5 sec: 8,334 declarations; 58,690 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.003%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 13:09:51.711
+!MESSAGE Indexed 'HelloBSP' (33 sources, 164 headers) in 3.73 sec: 18,448 declarations; 90,097 references; 3 unresolved inclusions; 46 syntax errors; 171 unresolved names (0.16%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 13:15:00.252
+!MESSAGE Indexed 'HelloBSP' (41 sources, 136 headers) in 2.25 sec: 15,498 declarations; 85,473 references; 10 unresolved inclusions; 46 syntax errors; 336 unresolved names (0.33%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-11-01 13:18:11.690
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-11-01 13:19:09.182
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-11-01 13:20:03.033
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-11-01 13:21:12.343
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-11-01 13:21:40.636
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 13:23:51.110
+!MESSAGE Indexed 'HelloBSPFinal' (66 sources, 187 headers) in 2.81 sec: 21,292 declarations; 102,104 references; 3 unresolved inclusions; 46 syntax errors; 171 unresolved names (0.14%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 13:24:10.580
+!MESSAGE Indexed 'HelloBSPFinal' (66 sources, 187 headers) in 2.52 sec: 21,292 declarations; 102,104 references; 3 unresolved inclusions; 46 syntax errors; 171 unresolved names (0.14%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 13:25:06.525
+!MESSAGE Indexed 'HelloBSPFinal' (66 sources, 187 headers) in 2.25 sec: 21,292 declarations; 102,104 references; 3 unresolved inclusions; 46 syntax errors; 171 unresolved names (0.14%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 13:25:22.773
+!MESSAGE Indexed 'HelloBSPFinal' (66 sources, 187 headers) in 2.47 sec: 21,292 declarations; 102,104 references; 3 unresolved inclusions; 46 syntax errors; 171 unresolved names (0.14%)
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-11-01 13:26:03.981
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2023-11-01 13:26:03.988
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2023-11-01 13:26:03.988
+!MESSAGE The project description file (.project) for 'HelloBSPFinal' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-11-01 13:26:04.268
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2023-11-01 13:26:05.660 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-11-01 13:26:14.631
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-01 13:26:19.264
+!MESSAGE Log4j2 initialized with config file /Users/dilnozabobokalonova/embedded_c/STM32-L4/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-01 13:26:30.421
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-11-01 13:27:07.362 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/dilnozabobokalonova/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-01 13:27:18.098
+!MESSAGE Log4j2 initialized with config file /Users/dilnozabobokalonova/embedded_c/STM32-L4/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-01 13:27:28.358
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 13:28:50.846
+!MESSAGE Indexed 'HelloBSPLove' (32 sources, 91 headers) in 6.81 sec: 8,334 declarations; 58,690 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.003%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 13:30:43.209
+!MESSAGE Indexed 'HelloBSPLove' (66 sources, 142 headers) in 2.7 sec: 14,480 declarations; 78,235 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0022%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-11-01 13:32:21.367
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 13:33:52.121
+!MESSAGE Indexed 'HelloBSPLove' (66 sources, 142 headers) in 2.41 sec: 14,480 declarations; 78,235 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0022%)

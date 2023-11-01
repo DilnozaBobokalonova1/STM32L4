@@ -1,0 +1,10 @@
+13:20:55 **** Build of configuration Debug for project HelloHAL ****
+make -j9 all 
+arm-none-eabi-size   HelloHAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19192	     20	   3484	  22696	   58a8	HelloHAL.elf
+Finished building: default.size.stdout
+ 
+
+13:20:56 Build Finished. 0 errors, 0 warnings. (took 349ms)
+
