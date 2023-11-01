@@ -147,3 +147,173 @@ Finished building: default.size.stdout
  
 Finished building: HelloBSPLove.list
  
+13:49:47 **** Incremental Build of configuration Debug for project HelloBSPLove ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L475xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/Drivers/BSP/B-L475E-IOT01" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:3: warning: implicit declaration of function 'BSP_TSENSOR_Init'; did you mean 'BSP_HSENSOR_Init'? [-Wimplicit-function-declaration]
+  117 |   BSP_TSENSOR_Init();
+      |   ^~~~~~~~~~~~~~~~
+      |   BSP_HSENSOR_Init
+../Core/Src/main.c:126:11: error: unknown type name 'var'
+  126 |           var temperature = BSP_TSENSOR_ReadTemp();
+      |           ^~~
+../Core/Src/main.c:126:29: warning: implicit declaration of function 'BSP_TSENSOR_ReadTemp'; did you mean 'BSP_HSENSOR_ReadID'? [-Wimplicit-function-declaration]
+  126 |           var temperature = BSP_TSENSOR_ReadTemp();
+      |                             ^~~~~~~~~~~~~~~~~~~~
+      |                             BSP_HSENSOR_ReadID
+../Core/Src/main.c:127:11: error: unknown type name 'var'
+  127 |           var button_state = BSP_PB_GetState(BUTTON_USER);
+      |           ^~~
+../Core/Src/main.c:126:15: warning: unused variable 'temperature' [-Wunused-variable]
+  126 |           var temperature = BSP_TSENSOR_ReadTemp();
+      |               ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j9 all" terminated with exit code 2. Build might be incomplete.
+13:51:02 **** Incremental Build of configuration Debug for project HelloBSPLove ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L475xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/Drivers/BSP/B-L475E-IOT01" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:3: warning: implicit declaration of function 'BSP_TSENSOR_Init'; did you mean 'BSP_HSENSOR_Init'? [-Wimplicit-function-declaration]
+  117 |   BSP_TSENSOR_Init();
+      |   ^~~~~~~~~~~~~~~~
+      |   BSP_HSENSOR_Init
+../Core/Src/main.c:126:34: warning: implicit declaration of function 'BSP_TSENSOR_ReadTemp'; did you mean 'BSP_HSENSOR_ReadID'? [-Wimplicit-function-declaration]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+      |                                  BSP_HSENSOR_ReadID
+../Core/Src/main.c:126:20: warning: unused variable 'temperature' [-Wunused-variable]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                    ^~~~~~~~~~~
+arm-none-eabi-gcc -o "HelloBSPLove.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloBSPLove.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HelloBSPLove.elf
+ 
+arm-none-eabi-size   HelloBSPLove.elf 
+arm-none-eabi-objdump -h -S  HelloBSPLove.elf  > "HelloBSPLove.list"
+   text	   data	    bss	    dec	    hex	filename
+  24040	     56	   3576	  27672	   6c18	HelloBSPLove.elf
+Finished building: default.size.stdout
+ 
+Finished building: HelloBSPLove.list
+ 
+13:52:17 **** Incremental Build of configuration Debug for project HelloBSPLove ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L475xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/Drivers/BSP/B-L475E-IOT01" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:3: warning: implicit declaration of function 'BSP_TSENSOR_Init'; did you mean 'BSP_HSENSOR_Init'? [-Wimplicit-function-declaration]
+  117 |   BSP_TSENSOR_Init();
+      |   ^~~~~~~~~~~~~~~~
+      |   BSP_HSENSOR_Init
+../Core/Src/main.c:126:34: warning: implicit declaration of function 'BSP_TSENSOR_ReadTemp'; did you mean 'BSP_HSENSOR_ReadID'? [-Wimplicit-function-declaration]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+      |                                  BSP_HSENSOR_ReadID
+../Core/Src/main.c:126:20: warning: unused variable 'temperature' [-Wunused-variable]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                    ^~~~~~~~~~~
+arm-none-eabi-gcc -o "HelloBSPLove.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloBSPLove.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HelloBSPLove.elf
+ 
+arm-none-eabi-size   HelloBSPLove.elf 
+arm-none-eabi-objdump -h -S  HelloBSPLove.elf  > "HelloBSPLove.list"
+   text	   data	    bss	    dec	    hex	filename
+  24040	     56	   3576	  27672	   6c18	HelloBSPLove.elf
+Finished building: default.size.stdout
+ 
+Finished building: HelloBSPLove.list
+ 
+13:54:08 **** Incremental Build of configuration Debug for project HelloBSPLove ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L475xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/Drivers/BSP/B-L475E-IOT01" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:126:34: warning: implicit declaration of function 'BSP_TSENSOR_ReadTemp'; did you mean 'BSP_HSENSOR_ReadID'? [-Wimplicit-function-declaration]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+      |                                  BSP_HSENSOR_ReadID
+../Core/Src/main.c:126:20: warning: unused variable 'temperature' [-Wunused-variable]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                    ^~~~~~~~~~~
+arm-none-eabi-gcc -o "HelloBSPLove.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloBSPLove.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HelloBSPLove.elf
+ 
+arm-none-eabi-size   HelloBSPLove.elf 
+arm-none-eabi-objdump -h -S  HelloBSPLove.elf  > "HelloBSPLove.list"
+   text	   data	    bss	    dec	    hex	filename
+  23620	     40	   3576	  27236	   6a64	HelloBSPLove.elf
+Finished building: default.size.stdout
+ 
+Finished building: HelloBSPLove.list
+ 
+13:54:15 **** Incremental Build of configuration Debug for project HelloBSPLove ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L475xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/Drivers/BSP/B-L475E-IOT01" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:3: warning: implicit declaration of function 'BSP_TSENSOR_Init'; did you mean 'BSP_HSENSOR_Init'? [-Wimplicit-function-declaration]
+  117 |   BSP_TSENSOR_Init();
+      |   ^~~~~~~~~~~~~~~~
+      |   BSP_HSENSOR_Init
+../Core/Src/main.c:126:34: warning: implicit declaration of function 'BSP_TSENSOR_ReadTemp'; did you mean 'BSP_HSENSOR_ReadID'? [-Wimplicit-function-declaration]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+      |                                  BSP_HSENSOR_ReadID
+../Core/Src/main.c:126:20: warning: unused variable 'temperature' [-Wunused-variable]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                    ^~~~~~~~~~~
+arm-none-eabi-gcc -o "HelloBSPLove.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloBSPLove.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HelloBSPLove.elf
+ 
+arm-none-eabi-size   HelloBSPLove.elf 
+arm-none-eabi-objdump -h -S  HelloBSPLove.elf  > "HelloBSPLove.list"
+   text	   data	    bss	    dec	    hex	filename
+  24040	     56	   3576	  27672	   6c18	HelloBSPLove.elf
+Finished building: default.size.stdout
+ 
+Finished building: HelloBSPLove.list
+ 
+13:55:49 **** Incremental Build of configuration Debug for project HelloBSPLove ****
+make -j9 all 
+arm-none-eabi-size   HelloBSPLove.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24040	     56	   3576	  27672	   6c18	HelloBSPLove.elf
+Finished building: default.size.stdout
+ 
+14:04:13 **** Incremental Build of configuration Debug for project HelloBSPLove ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L475xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/Drivers/BSP/B-L475E-IOT01" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:3: warning: implicit declaration of function 'BSP_TSENSOR_Init'; did you mean 'BSP_HSENSOR_Init'? [-Wimplicit-function-declaration]
+  117 |   BSP_TSENSOR_Init();
+      |   ^~~~~~~~~~~~~~~~
+      |   BSP_HSENSOR_Init
+../Core/Src/main.c:126:34: warning: implicit declaration of function 'BSP_TSENSOR_ReadTemp'; did you mean 'BSP_HSENSOR_ReadID'? [-Wimplicit-function-declaration]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+      |                                  BSP_HSENSOR_ReadID
+../Core/Src/main.c:126:20: warning: unused variable 'temperature' [-Wunused-variable]
+  126 |           uint32_t temperature = BSP_TSENSOR_ReadTemp();
+      |                    ^~~~~~~~~~~
+arm-none-eabi-gcc -o "HelloBSPLove.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloBSPLove/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloBSPLove.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HelloBSPLove.elf
+ 
+arm-none-eabi-size   HelloBSPLove.elf 
+arm-none-eabi-objdump -h -S  HelloBSPLove.elf  > "HelloBSPLove.list"
+   text	   data	    bss	    dec	    hex	filename
+  24040	     56	   3576	  27672	   6c18	HelloBSPLove.elf
+Finished building: default.size.stdout
+ 
+Finished building: HelloBSPLove.list
+ 
+14:04:24 **** Incremental Build of configuration Debug for project HelloBSPLove ****
+make -j9 all 
+arm-none-eabi-size   HelloBSPLove.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24040	     56	   3576	  27672	   6c18	HelloBSPLove.elf
+Finished building: default.size.stdout
+ 
+14:04:32 **** Incremental Build of configuration Debug for project HelloBSPLove ****
+make -j9 all 
+arm-none-eabi-size   HelloBSPLove.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24040	     56	   3576	  27672	   6c18	HelloBSPLove.elf
+Finished building: default.size.stdout
+ 

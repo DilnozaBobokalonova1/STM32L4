@@ -114,6 +114,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   BSP_HSENSOR_Init();
+  BSP_TSENSOR_Init();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -121,7 +123,13 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  BSP_LED_Toggle(LED2);
+	  uint32_t temperature = BSP_TSENSOR_ReadTemp();
+	  uint32_t button_state = BSP_PB_GetState(BUTTON_USER);
+	  if (button_state == 0) {
+		  BSP_LED_On(LED2);
+	  } else {
+		  BSP_LED_Off(LED2);
+	  }
 	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
