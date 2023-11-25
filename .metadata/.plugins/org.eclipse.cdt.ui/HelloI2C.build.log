@@ -1,0 +1,29 @@
+13:34:34 **** Incremental Build of configuration Debug for project HelloI2C ****
+make -j9 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L475xx -c -I/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloI2C/Drivers/BSP/Components/lis3mdl -I/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloI2C/Drivers/BSP/Components/Common -I../Core/Inc -I/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloI2C/Drivers/BSP/B-L475E-IOT01 -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:226:11: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  226 |           printf("X: %d, Y: %d, Z: %d\n", pData[0], pData[1], pData[2]);
+      |           ^~~~~~
+../Core/Src/main.c:28:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   27 | #include "magneto.h"
+  +++ |+#include <stdio.h>
+   28 | #include "stm32l4xx_hal_i2c.h"
+../Core/Src/main.c:226:11: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  226 |           printf("X: %d, Y: %d, Z: %d\n", pData[0], pData[1], pData[2]);
+      |           ^~~~~~
+../Core/Src/main.c:226:11: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "HelloI2C.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloI2C/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloI2C.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HelloI2C.elf
+ 
+arm-none-eabi-size   HelloI2C.elf 
+arm-none-eabi-objdump -h -S  HelloI2C.elf  > "HelloI2C.list"
+   text	   data	    bss	    dec	    hex	filename
+  38520	    528	   3904	  42952	   a7c8	HelloI2C.elf
+Finished building: default.size.stdout
+ 
+Finished building: HelloI2C.list
+ 
+
+13:34:35 Build Finished. 0 errors, 2 warnings. (took 1s.123ms)
+
