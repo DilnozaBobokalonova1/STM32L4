@@ -130,12 +130,12 @@ int main(void)
 	  HAL_Delay(5000);
 	  counter++;
 
-	  char msg[20];
-	  sprintf(msg, "UART4: %d, ", counter);
-	  int len = strlen(msg) + 1;
-	  HAL_UART_Transmit(&huart4, (uint8_t *) msg, len, HAL_MAX_DELAY);
-	  HAL_Delay(10000);
-	  counter++;
+//	  char msg[20];
+//	  sprintf(msg, "UART4: %d, ", counter);
+//	  int len = strlen(msg) + 1;
+//	  HAL_UART_Transmit(&huart4, (uint8_t *) msg, len, HAL_MAX_DELAY);
+//	  HAL_Delay(10000);
+//	  counter++;
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

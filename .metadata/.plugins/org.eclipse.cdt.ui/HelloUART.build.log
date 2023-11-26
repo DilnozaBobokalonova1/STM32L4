@@ -1,4 +1,4 @@
-06:51:13 **** Incremental Build of configuration Debug for project HelloUART ****
+14:13:34 **** Incremental Build of configuration Debug for project HelloUART ****
 make -j9 all 
 arm-none-eabi-size   HelloUART.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   HelloUART.elf
 Finished building: default.size.stdout
  
 
-06:51:14 Build Finished. 0 errors, 0 warnings. (took 251ms)
+14:13:34 Build Finished. 0 errors, 0 warnings. (took 238ms)
 
