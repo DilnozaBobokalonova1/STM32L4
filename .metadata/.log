@@ -539,3 +539,6 @@ C Model Exception: C Model Status [Element main.c does not exist.]
 
 !ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-11-25 13:24:53.508
 !MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-25 15:00:54.016
+!MESSAGE Indexed 'HelloGPIO' (32 sources, 91 headers) in 2.53 sec: 8,334 declarations; 58,690 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.003%)
