@@ -1,0 +1,10 @@
+11:52:34 **** Incremental Build of configuration Debug for project HelloADC ****
+make -j9 all 
+arm-none-eabi-size   HelloADC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24636	     20	   3580	  28236	   6e4c	HelloADC.elf
+Finished building: default.size.stdout
+ 
+
+11:52:34 Build Finished. 0 errors, 0 warnings. (took 262ms)
+

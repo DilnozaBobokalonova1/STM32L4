@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TimeOfFlight/Core/Src/vl53l0x_SingleRange&apos; to &apos;vl53l0x_SingleRange.c&apos;" description="Rename resource &apos;vl53l0x_SingleRange&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/vl53l0x_SingleRange" name="vl53l0x_SingleRange.c" stamp="1701277851316" updateReferences="true"/>
+</session>

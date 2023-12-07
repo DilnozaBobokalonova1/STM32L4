@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloI2C/Drivers/BSP/Components/Common"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloTimeOfFlight/Drivers/VL53L0X_1.0.4/Api/platform"/>
 	<section name="completion_proposal_size">
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
@@ -28,5 +28,7 @@
 		<item key="DIALOG_WIDTH" value="425"/>
 		<item key="DIALOG_HEIGHT" value="380"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="NewClassWizardPage">
 	</section>
 </section>

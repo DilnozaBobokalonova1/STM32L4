@@ -25,6 +25,7 @@
 #include "stm32l4xx_ll_gpio.h"
 #include "stm32l475e_iot01_tsensor.h"
 #include "stdio.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -59,11 +60,12 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 /* USER CODE BEGIN PV */
 int demo_number;
+int demo_one_start;
+int demo_two_start;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-static void DEMO_Init(void);
 static void MX_GPIO_Init(void);
 static void MX_DFSDM1_Init(void);
 static void MX_I2C2_Init(void);
@@ -74,7 +76,7 @@ static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
 static void MX_UART4_Init(void);
 /* USER CODE BEGIN PFP */
-
+static void DEMO_Init(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -89,7 +91,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 	if (GPIO_Pin == BUTTON_EXTI13_Pin) {
 		//if reached max num of demos, restart
 		if (demo_number == 3) {
-			demo_number = 1;
+			//reinitialize demo number and state
+			DEMO_Init();
 		}
 		else {
 			demo_number++;
@@ -134,12 +137,9 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
   MX_UART4_Init();
-  DEMO_Init();
   /* USER CODE BEGIN 2 */
-  //initialize the demo number to 1 upon the start
-//  demo_number = 1;
-  int demo_one_start = 1;
-  int demo_two_start = 1;
+  //initialize the demo number and states upon the start
+  DEMO_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -148,6 +148,7 @@ int main(void)
   {
 	  switch (demo_number) {
 	  case 1:
+		  HAL_UART_Transmit(&huart4, (uint8_t *) "DEMO 1:\n" , 10, 100);
 		  //use LL API
 		  if (demo_one_start) {
 			  uint32_t flash_size = LL_GetFlashSize();
@@ -157,16 +158,11 @@ int main(void)
 			  uid[2] = LL_GetUID_Word2();
 			  //display to the serial terminal
 			  char msg[60];
-			  sprintf(msg, "Flash size: %lu, UID: %lu%lu%lu separator", (unsigned long) flash_size, (unsigned long) uid[0], (unsigned long) uid[1], (unsigned long) uid[2]);
+			  sprintf(msg, "Flash size: %lu, UID: %lu%lu%lu\n", flash_size, uid[0], uid[1], uid[2]);
 			  int len = strlen(msg) + 1;
-			  HAL_UART_Transmit(&huart1, (uint8_t *) msg, len, HAL_MAX_DELAY);
+			  HAL_UART_Transmit(&huart4, (uint8_t *) msg, len, HAL_MAX_DELAY);
+			   //signify that the demo1 now has started, so no duplicate display of ids
 			  demo_one_start = 0;
-
-//			  printf("Initialization complete.\r\n");
-			  //test with UART1
-//			  HAL_UART_Transmit(&huart1, (uint8_t *) msg, len, HAL_MAX_DELAY);
-//			  printf("Flash size: %lu, UID: %lu%lu%lu\r\n", (unsigned long) flash_size, (unsigned long) uid[0], (unsigned long) uid[1], (unsigned long) uid[2]);
-
 		  }
 
 		  LL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
@@ -174,7 +170,8 @@ int main(void)
 		  break;
 
 	   case 2:
-		  //use HAL_API
+		   HAL_UART_Transmit(&huart4, (uint8_t *) "DEMO 2:\n" , 10, 100);
+		   //use HAL_API
 		   if (demo_two_start) {
 			   uint32_t device_id = HAL_GetDEVID();
 			   uint32_t dev_unique_id[3];
@@ -182,10 +179,10 @@ int main(void)
 			   dev_unique_id[1] = HAL_GetUIDw1();
 			   dev_unique_id[2] = HAL_GetUIDw2();
 			   char msg[60];
-			   sprintf(msg, "Device ID: %lu, Device unique ID: %lu%lu%lu", device_id, dev_unique_id[0], dev_unique_id[1], dev_unique_id[2]);
+			   sprintf(msg, "Device ID: %lu, Device unique ID: %lu%lu%lu\n", device_id, dev_unique_id[0], dev_unique_id[1], dev_unique_id[2]);
 			   int len = strlen(msg) + 1;
-			   HAL_UART_Transmit(&huart1, (uint8_t *) msg, len, HAL_MAX_DELAY);
-			   //signify that the demo now has started, so no duplicate display of ids
+			   HAL_UART_Transmit(&huart4, (uint8_t *) msg, len, HAL_MAX_DELAY);
+			   //signify that the demo2 now has started, so no duplicate display of ids
 			   demo_two_start = 0;
 		   }
 		   HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
@@ -193,13 +190,14 @@ int main(void)
 		   break;
 
 	   case 3:
+		   HAL_UART_Transmit(&huart4, (uint8_t *) "DEMO 3:\n" , 10, 100);
+		   //Use BSP_API
 		   BSP_TSENSOR_Init();
 		   float temp = BSP_TSENSOR_ReadTemp();
-		   char msg[60];
-		   sprintf(msg, "Temperature is: %f", temp);
+		   char msg[340];
+		   sprintf(msg, "Temperature is: %f\n", temp);
 		   int len = strlen(msg) + 1;
-		   HAL_UART_Transmit(&huart1, (uint8_t*) msg, len, HAL_MAX_DELAY);
-
+		   HAL_UART_Transmit(&huart4, (uint8_t*) msg, len, HAL_MAX_DELAY);
 		   BSP_LED_Toggle(LED2);
 		   HAL_Delay(3000);
 		   break;
@@ -757,6 +755,8 @@ static void MX_GPIO_Init(void)
 static void DEMO_Init(void)
 {
 	demo_number = 1;
+	demo_one_start = 1;
+	demo_two_start = 1;
 }
 /* USER CODE END 4 */
 

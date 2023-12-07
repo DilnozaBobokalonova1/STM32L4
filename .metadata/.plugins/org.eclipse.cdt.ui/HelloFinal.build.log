@@ -1,37 +1,10 @@
-16:52:57 **** Incremental Build of configuration Debug for project HelloFinal ****
+12:28:02 **** Incremental Build of configuration Debug for project HelloFinal ****
 make -j9 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L475xx -c -I../Core/Inc -I"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloFinal/Drivers/BSP/B-L475E-IOT01" -I/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloFinal/Drivers/BSP/Components -I/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloFinal/Drivers/BSP/B-L475E-IOT01 -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:161:37: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
-  161 |                           int len = strlen(msg) + 1;
-      |                                     ^~~~~~
-../Core/Src/main.c:28:1: note: include '<string.h>' or provide a declaration of 'strlen'
-   27 | #include "stdio.h"
-  +++ |+#include <string.h>
-   28 | /* USER CODE END Includes */
-../Core/Src/main.c:161:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  161 |                           int len = strlen(msg) + 1;
-      |                                     ^~~~~~
-../Core/Src/main.c:161:37: note: include '<string.h>' or provide a declaration of 'strlen'
-../Core/Src/main.c:186:38: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  186 |                            int len = strlen(msg) + 1;
-      |                                      ^~~~~~
-../Core/Src/main.c:186:38: note: include '<string.h>' or provide a declaration of 'strlen'
-../Core/Src/main.c:200:30: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  200 |                    int len = strlen(msg) + 1;
-      |                              ^~~~~~
-../Core/Src/main.c:200:30: note: include '<string.h>' or provide a declaration of 'strlen'
-arm-none-eabi-gcc -o "HelloFinal.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/dilnozabobokalonova/embedded_c/STM32-L4/HelloFinal/STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloFinal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: HelloFinal.elf
- 
 arm-none-eabi-size   HelloFinal.elf 
-arm-none-eabi-objdump -h -S  HelloFinal.elf  > "HelloFinal.list"
    text	   data	    bss	    dec	    hex	filename
-  39916	    496	   4048	  44460	   adac	HelloFinal.elf
+  40068	    496	   4056	  44620	   ae4c	HelloFinal.elf
 Finished building: default.size.stdout
  
-Finished building: HelloFinal.list
- 
 
-16:52:58 Build Finished. 0 errors, 4 warnings. (took 750ms)
+12:28:02 Build Finished. 0 errors, 0 warnings. (took 200ms)
 

@@ -77,7 +77,8 @@ static void MX_ADC1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+//uint32_t adcResult1;
+//HAL_StatusTypeDef halResult1;
 /* USER CODE END 0 */
 
 /**
@@ -118,15 +119,22 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
+
+  //ADC1 is initialized, where we could access the ARD_A0 pin
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
+  uint32_t adcResult1;
+  HAL_StatusTypeDef halResult1;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  HAL_ADC_Start(&hadc1);
+	  halResult1 = HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+	  adcResult1 = HAL_ADC_GetValue(&hadc1);
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -271,7 +279,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_1;
+  sConfig.Channel = ADC_CHANNEL_14;
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
