@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="HAL_ADC_ConfigChannel"/>
+		<item key="selection" value="IRQ"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="HAL_ADC_ConfigChannel"/>
-			<item value="LL_ADC_REG_SetSequencerRanks"/>
-			<item value="ADC_ChannelConfTypeDef"/>
-			<item value="ADC_CHANNEL_1"/>
-			<item value="i2c"/>
-			<item value="windows"/>
-			<item value="Windows"/>
-			<item value="RANGING_SENSOR_COMMS_Enum_Devices"/>
-			<item value="Dev"/>
-			<item value="VL53L0X_REG_PRE_RANGE_CONFIG_SIGMA_THRESH_HI"/>
-			<item value="VL53L0X_SetOffsetCalibrationDataMicroMeter"/>
-			<item value="flight"/>
-			<item value="LL_GetFlashSize"/>
-			<item value="ADC"/>
-			<item value="ext"/>
+			<item value="IRQ"/>
+			<item value="systick"/>
+			<item value="EXTI15_10_IRQHandler"/>
+			<item value="green"/>
+			<item value="LED"/>
+			<item value="HAL_DELAY"/>
+			<item value="PWR_TypeDef"/>
+			<item value="RCC_LSE_Config"/>
+			<item value="SystemClock_Config"/>
+			<item value="USART1_BASE"/>
+			<item value="program"/>
+			<item value="HAL_GPIO_EXTI_Callback"/>
+			<item value="BSP_QSPI_Write"/>
+			<item value="HAL_SPI_MspInit"/>
+			<item value="USE_HAL_SPI_REGISTER_CALLBACKS"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1155"/>
-		<item key="DIALOG_Y_ORIGIN" value="328"/>
+		<item key="DIALOG_X_ORIGIN" value="1088"/>
+		<item key="DIALOG_Y_ORIGIN" value="593"/>
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="402"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="306"/>
+		<item key="DIALOG_Y_ORIGIN" value="426"/>
 	</section>
 </section>
